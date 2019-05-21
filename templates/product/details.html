@@ -67,7 +67,7 @@
   {% endif %}
   <div class="row product">
     <script type="application/ld+json">{{ json_ld_product_data|safe }}</script>
-    <div class="col-md-6 col-12 product__gallery">
+    <div class="col-md-8 col-12 product__gallery">
       {% with images=product_images %}
         {% if images %}
           <div id="carousel-example-generic" class="carousel slide">
@@ -76,10 +76,10 @@
                 <div class="carousel-item{% if forloop.first %} active{% endif %}">
                   <div class="product-image">
                     <img class="d-block img-fluid lazyload lazypreload"
-                         data-src="{% get_thumbnail image.image method="thumbnail" size=540 %}"
-                         data-srcset="{% get_thumbnail image.image method="thumbnail" size=540 %} 1x, {% get_thumbnail image.image method="thumbnail" size=1080 %} 2x"
+                         data-src="{% get_thumbnail image.image method="thumbnail" size=500 %}"
+                         data-srcset="{% get_thumbnail image.image method="thumbnail" size=500 %} 1x, {% get_thumbnail image.image method="thumbnail" size=1300 %} 2x"
                          alt=""
-                         src="{% placeholder size=540 %}">
+                         src="{% placeholder size=500 %}">
                   </div>
                 </div>
               {% endfor %}
@@ -107,14 +107,14 @@
             </ol>
           </div>
         {% else %}
-          <img data-src="{% placeholder size=540 %}"
-               data-srcset="{% placeholder size=540 %} 1x, {% placeholder size=1080 %} 2x"
+          <img data-src="{% placeholder size=500 %}"
+               data-srcset="{% placeholder size=500 %} 1x, {% placeholder size=1300 %} 2x"
                alt=""
                class="img-fluid lazyload lazypreload">
         {% endif %}
       {% endwith %}
     </div>
-    <div class="col-md-6 col-12 product__info">
+    <div class="col-md-4 col-12 product__info card" style="padding-top:3%;">
       <h1 class="product__info__name">
         {{ product.translated }}
       </h1>
@@ -195,7 +195,6 @@
         <hr>
         {% autoescape off %}{{ product.translated.description|safe }}{% endautoescape %}
       </div>
-      <hr>
       <table>
         {% for attribute, value in product_attributes.items %}
           <tr>

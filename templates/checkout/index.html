@@ -77,9 +77,9 @@
       </div>
       <div class="row">
         <div class="col-md-12">
-            <a href="{% url "checkout:login" %}" class="btn btn-primary float-right checkout-preview__submit">
+            <a href="{% url "checkout:login" %}" class="btn btn-primary float-right checkout-preview__submit" style="margin-left:1%; margin-bottom:1%;"> 
             {% trans "Checkout" context "Checkout primary action" %}
-          </a>
+            </a>
             <button class="btn secondary float-right checkout__clear" data-action="{% url 'checkout:clear' %}">
             {% trans "Clear checkout" context "checkout page: secondary action, empty the checkout" %}
           </button>

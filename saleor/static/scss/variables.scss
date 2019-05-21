@@ -1,24 +1,24 @@
 // GLOBAL
 $global-padding: 1rem;
 $global-margin: 1rem;
-$button-border-radius: 12px;
+$button-border-radius: 5px;
 
 // COLORS
 $body-color: #333333;
 $white: #fff;
-$light-gray: #f1f5f5;
+$light-gray: #fff2e6;
 $gray: #d3d1d0;
 $darken-gray: darken($gray, 10%);
 $skull-gray: #828282;
-$blue: #26a5d4;
+$blue: #d2302c;
 $darken-blue: darken($blue, 10%);
-$dark-blue: #21125e;
+$dark-blue: #000000;
 $red: #eb5757;
 $dark-red: #c53636;
 $green: #27ae60;
 $beige: #fffaec;
-$turquoise: #13bebb;
-$light-turquoise: #3ee7cd;
+$turquoise:#e66f00;
+$light-turquoise: #d2302c;
 
 // TYPOGRAPHY
 $font-family-sans-serif: "Lato", sans-serif;
@@ -27,10 +27,10 @@ $h2-font-size: 1.3rem;
 $h3-font-size: 1rem;
 
 $theme-colors: (
-  primary: $light-turquoise,
+  primary: #d2302c,
   secondary: $white,
   success: $green,
-  info: $turquoise,
+  info: #bd2b28,
   warning: #ffc107,
   danger: $red,
   light: #f8f9fa,
