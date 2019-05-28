@@ -5,6 +5,13 @@
 {% load static %}
 
 <div class="container">
+  <button rel="nofollow" class="chk_close btn">
+      <img src="/static/images/close.png" width="30" height="30"/>
+  </button>
+    <div style="text-align:center;">
+        <img src="/static/images/checkout.png" width="24" height="24"/>
+        <h2>YOUR CART</h2>
+    </div>
   {% if quantity > 0 %}
     <div id="checkout-preview-dropdown-list" class="checkout-preview-dropdown__list{% if lines|length <= 2 %} overflow{% endif %}">
     {% for line in lines %}

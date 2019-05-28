@@ -83,17 +83,17 @@
       }
     }
     .carousel-indicators {
-      position: sticky;
-      left: 1%;
-      bottom: 80%;
-      width: 100px;
+      position: relative;
+      top: 100%;
+      width: auto;
+      left: 0;
       display: block;
       text-align: center;
       z-index: 3;
       li {
-        display: list-item;
+        display: inline;
         text-indent: 0;
-        margin-bottom: 70px;
+        margin: 0;
         img {
           border: 1px solid $light-gray;
           padding: 10px;

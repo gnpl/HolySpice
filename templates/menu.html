@@ -2,11 +2,11 @@
 {% load i18n %}
 {% get_current_language as LANGUAGE_CODE %}
 {% load get_menu_item_name from shop %}
-
-<ul class="menu {% if horizontal %}nav mb-4 mb-md-0{% endif %}{% if request.get_full_path == home_url %} no-border{% endif %}">
+<ul class="menu {% if horizontal %}nav mb-4 mb-md-0{% endif %}{% if request.get_full_path == home_url %} no-border{% endif %} men" >
   {% for item in menu_items %}
   {% with children=item.child_items %}
-  <li class="{% if horizontal %}nav-item{% endif %} {% if children %}nav-item__dropdown{% endif %} menu__item">
+ 
+  <li class="{% if horizontal %}nav-item{% endif %} {% if children %}nav-item__dropdown{% endif %} menu__item" >
     <a class="{% if horizontal %}nav-link{% endif %}" href="{{ item.url }}">
       {% get_menu_item_name lang_code=LANGUAGE_CODE menu_item=item %}
     </a>
@@ -16,14 +16,13 @@
         <ul>
           {% for child in children %}
             <li>
-              <a href="{{ child.url }}">
+              <a href="{{ child.url }}" style="font-size:20px;">
                 {% if horizontal %}
                   <strong>{% get_menu_item_name lang_code=LANGUAGE_CODE menu_item=child %}</strong>
                 {% else %}
                   {% get_menu_item_name lang_code=LANGUAGE_CODE menu_item=child %}
                 {% endif %}
               </a>
-
               {% with grandchildren=child.child_items %}
                 {% if grandchildren %}
                   <ul>
@@ -46,4 +45,6 @@
   </li>
   {% endwith %}
   {% endfor %}
+  
 </ul>
+

@@ -5,9 +5,9 @@
     "fields": {
       "seo_title": "",
       "seo_description": "",
-      "name": "Accessories",
-      "slug": "accessories",
-      "description": "",
+      "name": "Herbs And Spices",
+      "slug": "herbs-and-spices",
+      "description": " Holy Spice fresh Herbs and Spices",
       "description_json": {
         "blocks": [
           {
@@ -37,9 +37,9 @@
     "fields": {
       "seo_title": "",
       "seo_description": "",
-      "name": "Groceries",
-      "slug": "groceries",
-      "description": "",
+      "name": "Sauces",
+      "slug": "sauces",
+      "description": " Holy Spice fresh Sauces",
       "description_json": {
         "blocks": [
           {
@@ -69,8 +69,72 @@
     "fields": {
       "seo_title": "",
       "seo_description": "",
-      "name": "Apparel",
-      "slug": "apparel",
+      "name": "Seasonings",
+      "slug": "seasonings",
+      "description": "Holy Spice fresh Seasonings",
+      "description_json": {
+        "blocks": [
+          {
+            "key": "",
+            "data": {},
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "entityRanges": [],
+            "inlineStyleRanges": []
+          }
+        ],
+        "entityMap": {}
+      },
+      "parent": null,
+      "background_image": "category-backgrounds/apparel.jpg",
+      "background_image_alt": "",
+      "lft": 1,
+      "rght": 2,
+      "tree_id": 3,
+      "level": 0
+    }
+  },
+  {
+    "model": "product.category",
+    "pk": 3,
+    "fields": {
+      "seo_title": "",
+      "seo_description": "",
+      "name": "Super Foods",
+      "slug": "super-foods",
+      "description": "Holy Spice Super Foods",
+      "description_json": {
+        "blocks": [
+          {
+            "key": "",
+            "data": {},
+            "text": "",
+            "type": "unstyled",
+            "depth": 0,
+            "entityRanges": [],
+            "inlineStyleRanges": []
+          }
+        ],
+        "entityMap": {}
+      },
+      "parent": null,
+      "background_image": "category-backgrounds/apparel.jpg",
+      "background_image_alt": "",
+      "lft": 1,
+      "rght": 2,
+      "tree_id": 3,
+      "level": 0
+    }
+  },
+  {
+    "model": "product.category",
+    "pk": 4,
+    "fields": {
+      "seo_title": "",
+      "seo_description": "",
+      "name": "Teas",
+      "slug": "teas",
       "description": "",
       "description_json": {
         "blocks": [
@@ -99,11 +163,11 @@
     "model": "product.producttype",
     "pk": 7,
     "fields": {
-      "name": "Paint",
+      "name": "Seasonings",
       "has_variants": true,
       "is_shipping_required": true,
       "tax_rate": "standard",
-      "weight": "1.0 kg"
+      "weight": "0.0 kg"
     }
   },
   {

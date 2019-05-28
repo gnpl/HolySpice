@@ -393,8 +393,8 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 
 # Amazon S3 configuration
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
-AWS_LOCATION = os.environ.get('AWS_LOCATION', '')
-AWS_MEDIA_BUCKET_NAME = os.environ.get('AWS_MEDIA_BUCKET_NAME')
+AWS_LOCATION = os.environ.get('AWS_LOCATION',"")
+AWS_MEDIA_BUCKET_NAME = 'holyspice'
 AWS_MEDIA_CUSTOM_DOMAIN = os.environ.get('AWS_MEDIA_CUSTOM_DOMAIN')
 AWS_QUERYSTRING_AUTH = get_bool_from_env('AWS_QUERYSTRING_AUTH', False)
 AWS_S3_CUSTOM_DOMAIN = os.environ.get('AWS_STATIC_CUSTOM_DOMAIN')
@@ -551,8 +551,8 @@ DEFAULT_MENUS = {
 NOCAPTCHA = True
 
 # Set Google's reCaptcha keys
-RECAPTCHA_PUBLIC_KEY = os.environ.get('RECAPTCHA_PUBLIC_KEY')
-RECAPTCHA_PRIVATE_KEY = os.environ.get('RECAPTCHA_PRIVATE_KEY')
+RECAPTCHA_PUBLIC_KEY = "6LeIxAcTAAAAAJcZVRqyHh71UMIEGNQ_MXjiZKhI"
+RECAPTCHA_PRIVATE_KEY = "6LeIxAcTAAAAAGG-vFI1TnRWxMZNFuojJ4WifJWe"
 
 
 #  Sentry
@@ -574,7 +574,7 @@ RAZORPAY = 'razorpay'
 STRIPE = 'stripe'
 
 CHECKOUT_PAYMENT_GATEWAYS = {
-    DUMMY: pgettext_lazy('Payment method name', 'Dummy gateway')}
+    RAZORPAY: pgettext_lazy('Payment method name', 'RazorPay')}
 
 PAYMENT_GATEWAYS = {
     DUMMY: {
@@ -592,10 +592,10 @@ PAYMENT_GATEWAYS = {
     RAZORPAY: {
         'module': 'saleor.payment.gateways.razorpay',
         'connection_params': {
-            'public_key': os.environ.get('RAZORPAY_PUBLIC_KEY'),
-            'secret_key': os.environ.get('RAZORPAY_SECRET_KEY'),
+            'public_key': 'rzp_test_MG7rJtlUyEEdR3',
+            'secret_key': 'HnAy7AUkE3ejdEDKFoKKciAu',
             'prefill': get_bool_from_env('RAZORPAY_PREFILL', True),
-            'store_name': os.environ.get('RAZORPAY_STORE_NAME'),
+            'store_name': 'HolySpice',
             'store_image': os.environ.get('RAZORPAY_STORE_IMAGE')
         }
     },

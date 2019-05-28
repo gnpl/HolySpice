@@ -1,8 +1,8 @@
 .checkout-preview-dropdown {
-  position: absolute;
+  position: fixed;
   width: 33rem;
-  top: 7.4rem;
-  right: 0;
+  top: 0;
+  right:0;
   z-index: 3;
   display: none;
   border: solid 1px $gray;
@@ -11,10 +11,10 @@
   .container {
     padding-top: $global-padding * 2;
     padding-bottom: $global-padding * 2;
-    max-height: 28rem;
+    height: 100vh;
   }
   &__list {
-    max-height: 10rem;
+    max-height: 90vh;
     overflow-y: auto;
     overflow-x: hidden;
     border-top: solid 1px $gray;

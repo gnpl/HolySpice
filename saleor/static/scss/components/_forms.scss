@@ -81,10 +81,10 @@ input {
 
 .search-form {
   width: 100%;
-  position: relative;
+  position: absolute;
   transition: $transition-base;
   &.search-form--hidden {
-    transform: translateX(-100vw);
+    transform: translateX(-200vw);
   }
   &__close-icon {
     position: absolute;
@@ -120,9 +120,9 @@ input {
   }
   @include media-breakpoint-down(sm) {
     display: block;
-    left: 0;
+    transform: translateX(0vw);
     position: absolute;
-    max-width: 100%;
+    width: 100vw;
     float: right;
     top: 0;
     z-index: 5;

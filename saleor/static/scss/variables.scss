@@ -6,19 +6,19 @@ $button-border-radius: 5px;
 // COLORS
 $body-color: #333333;
 $white: #fff;
-$light-gray: #fff2e6;
+$light-gray: #fff;
 $gray: #d3d1d0;
 $darken-gray: darken($gray, 10%);
 $skull-gray: #828282;
-$blue: #d2302c;
+$blue: #000000;
 $darken-blue: darken($blue, 10%);
 $dark-blue: #000000;
 $red: #eb5757;
 $dark-red: #c53636;
 $green: #27ae60;
-$beige: #fffaec;
-$turquoise:#e66f00;
-$light-turquoise: #d2302c;
+$beige: #fff;
+$turquoise:Black;
+$light-turquoise: #000000;
 
 // TYPOGRAPHY
 $font-family-sans-serif: "Lato", sans-serif;
@@ -27,7 +27,7 @@ $h2-font-size: 1.3rem;
 $h3-font-size: 1rem;
 
 $theme-colors: (
-  primary: #d2302c,
+  primary: #000000,
   secondary: $white,
   success: $green,
   info: #bd2b28,

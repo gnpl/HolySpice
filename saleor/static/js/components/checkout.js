@@ -5,6 +5,7 @@ export const $checkoutDropdown = $('.checkout-preview-dropdown');
 export const $checkoutIcon = $('.checkout__icon');
 export const $addToCheckoutError = $('.product__info__form-error small');
 export const $removeProductSuccess = $('.remove-product-alert');
+export const $closecheckout = $('.chk_close btn');
 
 export const onAddToCheckoutError = (response) => {
   $addToCheckoutError.html(getAjaxError(response));
@@ -31,12 +32,8 @@ export default $(document).ready((e) => {
   $.get(summaryLink, (data) => {
     $checkoutDropdown.html(data);
   });
-  $('.navbar__brand__checkout').hover((e) => {
+  $checkoutIcon.click((e) => {
     $checkoutDropdown.addClass('show');
-    $checkoutIcon.addClass('hover');
-  }, (e) => {
-    $checkoutDropdown.removeClass('show');
-    $checkoutIcon.removeClass('hover');
   });
   $('.product-form button').click((e) => {
     e.preventDefault();
@@ -56,6 +53,9 @@ export default $(document).ready((e) => {
         onAddToCheckoutError(response);
       }
     });
+  });
+  $closecheckout.click((e) => {
+    $checkoutDropdown.removeClass('show');
   });
   $('.checkout__clear').click((e) => {
     $.ajax({
