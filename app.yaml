@@ -1,0 +1,12 @@
+runtime: python27
+api_version: 1
+threadsafe: true
+
+handlers:
+- url: /
+  static_files: saleor/static
+  upload: saleor
+
+- url: /(.*)
+  static_files: saleor
+  upload: saleor/(.*)

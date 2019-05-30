@@ -95,7 +95,7 @@ input {
     }
   }
   .form-control {
-    height: 53px;
+    height: 8rem;
     width: 100%;
     border-radius: $button-border-radius;
     padding: $global-padding;
@@ -104,7 +104,7 @@ input {
   .btn {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    height: 100%;
+    height: 8rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -120,7 +120,7 @@ input {
   }
   @include media-breakpoint-down(sm) {
     display: block;
-    transform: translateX(0vw);
+    transform: translateX(-81vw);
     position: absolute;
     width: 100vw;
     float: right;

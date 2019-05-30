@@ -244,18 +244,17 @@
         line-height: 2.4rem;
       }
       .checkout__icon {
-        color: $body-color;
+        color: black;
         display: block;
-        border: solid 1px transparent;
-        border-radius: 4px 4px 0 0;
-        padding: $global-padding * 2.5 $global-padding * 1.5;
+        padding: 3.3rem 1.3rem 0rem 1.3rem;
         position: absolute;
         right: 0;
         top: 0;
         z-index: 0;
         @include media-breakpoint-down(sm) {
           position: relative;
-          padding: 2rem 1rem 1rem 0;
+          padding: 1.5rem 1rem 1rem 0.7rem;
+          
         }
         &.hover {
           text-decoration: none;
@@ -279,8 +278,8 @@
         }
         .badge {
           position: absolute;
-          right: 10px;
-          top: 30px;
+          right: 5px;
+          top: 37px;
           background-color: $light-turquoise;
           border-radius: 100px;
           color: $white;
@@ -293,7 +292,7 @@
           }
           @include media-breakpoint-down(sm) {
             right: 0;
-            top: 20px;
+            top: 10px;
           }
         }
       }

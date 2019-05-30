@@ -5,7 +5,6 @@ export const $checkoutDropdown = $('.checkout-preview-dropdown');
 export const $checkoutIcon = $('.checkout__icon');
 export const $addToCheckoutError = $('.product__info__form-error small');
 export const $removeProductSuccess = $('.remove-product-alert');
-export const $closecheckout = $('.chk_close btn');
 
 export const onAddToCheckoutError = (response) => {
   $addToCheckoutError.html(getAjaxError(response));
@@ -34,6 +33,9 @@ export default $(document).ready((e) => {
   });
   $checkoutIcon.click((e) => {
     $checkoutDropdown.addClass('show');
+    $('.chclose').click((e) => {
+      $checkoutDropdown.removeClass('show');
+    });
   });
   $('.product-form button').click((e) => {
     e.preventDefault();
@@ -54,9 +56,7 @@ export default $(document).ready((e) => {
       }
     });
   });
-  $closecheckout.click((e) => {
-    $checkoutDropdown.removeClass('show');
-  });
+  
   $('.checkout__clear').click((e) => {
     $.ajax({
       url: $('.checkout__clear').data('action'),

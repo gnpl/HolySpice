@@ -394,7 +394,7 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 # Amazon S3 configuration
 AWS_ACCESS_KEY_ID = os.environ.get('AWS_ACCESS_KEY_ID')
 AWS_LOCATION = os.environ.get('AWS_LOCATION',"")
-AWS_MEDIA_BUCKET_NAME = 'holyspice'
+AWS_MEDIA_BUCKET_NAME = os.environ.get('AWS_MEDIA_BUCKET_NAME')
 AWS_MEDIA_CUSTOM_DOMAIN = os.environ.get('AWS_MEDIA_CUSTOM_DOMAIN')
 AWS_QUERYSTRING_AUTH = get_bool_from_env('AWS_QUERYSTRING_AUTH', False)
 AWS_S3_CUSTOM_DOMAIN = os.environ.get('AWS_STATIC_CUSTOM_DOMAIN')
@@ -574,7 +574,7 @@ RAZORPAY = 'razorpay'
 STRIPE = 'stripe'
 
 CHECKOUT_PAYMENT_GATEWAYS = {
-    RAZORPAY: pgettext_lazy('Payment method name', 'RazorPay')}
+    DUMMY: pgettext_lazy('Payment method name', 'dummy')}
 
 PAYMENT_GATEWAYS = {
     DUMMY: {
@@ -592,10 +592,10 @@ PAYMENT_GATEWAYS = {
     RAZORPAY: {
         'module': 'saleor.payment.gateways.razorpay',
         'connection_params': {
-            'public_key': 'rzp_test_MG7rJtlUyEEdR3',
-            'secret_key': 'HnAy7AUkE3ejdEDKFoKKciAu',
+            'public_key': os.environ.get('RAZORPAY_STORE_IMAGE'),
+            'secret_key': os.environ.get('RAZORPAY_STORE_IMAGE'),
             'prefill': get_bool_from_env('RAZORPAY_PREFILL', True),
-            'store_name': 'HolySpice',
+            'store_name': os.environ.get('RAZORPAY_STORE_IMAGE'),
             'store_image': os.environ.get('RAZORPAY_STORE_IMAGE')
         }
     },

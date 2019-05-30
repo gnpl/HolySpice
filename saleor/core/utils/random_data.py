@@ -107,7 +107,12 @@ IMAGES_MAPPING = {
 CATEGORY_IMAGES = {
     7: 'accessories.jpg',
     8: 'groceries.jpg',
-    9: 'apparel.jpg'
+    9: 'apparel.jpg',
+    10:'groceries.jpg',
+    11:'groceries.jpg',
+    12:'groceries.jpg',
+    4:'groceries.jpg',
+    3:'groceries.jpg',
 }
 
 COLLECTION_IMAGES = {
@@ -641,7 +646,7 @@ def generate_menu_items(menu: Menu, category: Category, parent_menu_item):
 
 
 def generate_menu_tree(menu):
-    categories = Category.tree.get_queryset().filter(products__isnull=False)
+    categories = Category.tree.get_queryset().filter(products__isnull=True)
     for category in categories:
         if not category.parent_id:
             for msg in generate_menu_items(menu, category, None):
