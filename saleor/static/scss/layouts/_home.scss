@@ -71,3 +71,17 @@
     }
   }
 }
+.acc{
+  left:30%;
+  float: center;
+}
+
+@media (max-width: 992px) {
+  .acc{
+    float: left;
+    left: 0%;
+  }
+  .hmenu{
+    padding-left: 3vw;
+  }
+}
