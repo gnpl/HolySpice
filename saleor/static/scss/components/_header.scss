@@ -111,6 +111,7 @@
     a {
       text-decoration: none;
       font-size: 1.3rem;
+      transition: font-size 0.3s ease;
     }
 
     @include media-breakpoint-down(sm) {
