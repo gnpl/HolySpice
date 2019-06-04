@@ -667,7 +667,7 @@ def create_menus():
         name=settings.DEFAULT_MENUS['bottom_menu_name'])
     bottom_menu.items.all().delete()
     collection = Collection.objects.filter(
-        products__isnull=False).order_by('?')[0]
+        products__isnull=False)
     item, _ = bottom_menu.items.get_or_create(
         name='Collections',
         collection=collection)
