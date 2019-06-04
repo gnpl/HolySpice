@@ -593,7 +593,7 @@ PAYMENT_GATEWAYS = {
         'module': 'saleor.payment.gateways.razorpay',
         'connection_params': {
             'public_key': 'rzp_test_bpEYk4D9U2cdEr',
-            'secret_key': 'AG4NAISGmJPoYqJgNy6DkYdi'),
+            'secret_key': 'AG4NAISGmJPoYqJgNy6DkYdi',
             'prefill': get_bool_from_env('RAZORPAY_PREFILL', True),
             'store_name': 'holyspice',
             'store_image': os.environ.get('RAZORPAY_STORE_IMAGE')
