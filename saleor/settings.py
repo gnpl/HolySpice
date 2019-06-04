@@ -574,7 +574,7 @@ RAZORPAY = 'razorpay'
 STRIPE = 'stripe'
 
 CHECKOUT_PAYMENT_GATEWAYS = {
-    DUMMY: pgettext_lazy('Payment method name', 'dummy')}
+    DUMMY: pgettext_lazy('Payment method name', 'razorpay')}
 
 PAYMENT_GATEWAYS = {
     DUMMY: {
@@ -592,10 +592,10 @@ PAYMENT_GATEWAYS = {
     RAZORPAY: {
         'module': 'saleor.payment.gateways.razorpay',
         'connection_params': {
-            'public_key': os.environ.get('RAZORPAY_STORE_IMAGE'),
-            'secret_key': os.environ.get('RAZORPAY_STORE_IMAGE'),
+            'public_key': 'rzp_test_bpEYk4D9U2cdEr',
+            'secret_key': 'AG4NAISGmJPoYqJgNy6DkYdi'),
             'prefill': get_bool_from_env('RAZORPAY_PREFILL', True),
-            'store_name': os.environ.get('RAZORPAY_STORE_IMAGE'),
+            'store_name': 'holyspice',
             'store_image': os.environ.get('RAZORPAY_STORE_IMAGE')
         }
     },
