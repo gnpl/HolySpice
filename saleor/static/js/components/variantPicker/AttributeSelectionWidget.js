@@ -49,7 +49,7 @@ export default class AttributeSelectionWidget extends Component {
             );
           })}
         </div>
-        <p>PRICE/GRAM - ₹{rates[selected]}</p>
+        <p>₹{rates[selected]}/gm</p>
       </div>
     );
   }
