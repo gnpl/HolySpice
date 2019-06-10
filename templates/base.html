@@ -170,7 +170,7 @@
             <div class="navbar__brand__checkout ">
               <button rel="nofollow" class="checkout__icon btn" >  
                 <div class="navbar__brand__checkout__icon">
-                  <svg data-src="{% static "images/checkout.svg" %}" width="24" height="24"/>
+                  <img src="/static/images/checkout.png" width="24" height="24"/>
                 </div>
                 <span class="badge {% if not checkout_counter %}empty{% endif %}">
                   {% if checkout_counter %}
@@ -187,7 +187,7 @@
             <div class="navbar__search static men2">
                 {% if SEARCH_IS_ENABLED %}
                   <div class="d-md-none mobile-search-icon">
-                    <svg data-src="{% static "images/search.svg" %}" width="30" height="30"/>
+                    <img src="/static/images/search.png" width="28" height="28"/>
                   </div>
                   <form class="form-inline search-form search-form--hidden" action="{% url "search:search" %}">
                     <div class="mobile-close-search d-md-none">
