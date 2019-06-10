@@ -72,6 +72,7 @@
            data-srcset="{% static 'images/empty-checkout-bg.png' %} 1x, {% static 'images/empty-checkout-bg2x.png' %} 2x"
            src="{% placeholder size=255 %}"
            class="lazyload lazypreload">
+          <br>
       <a href="{% url 'home' %}" class="btn btn-primary">{% trans "Check out our sales" context "Empty checkout link" %}</a>
     </div>
   {% endif %}
