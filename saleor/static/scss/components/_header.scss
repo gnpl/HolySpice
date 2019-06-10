@@ -285,10 +285,10 @@
           background-color: $light-turquoise;
           border-radius: 100px;
           color: $white;
-          width: 30px;
-          height: 30px;
+          width: 25px;
+          height: 25px;
           text-align: center;
-          line-height: 2;
+          line-height: 1.5;
           &.empty {
             background-color: $darken-gray;
           }
