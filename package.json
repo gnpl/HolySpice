@@ -92,7 +92,8 @@
     "typescript": "^3.2.2",
     "universal-cookie": "^2.1.2",
     "url-join": "^4.0.0",
-    "use-react-router": "^1.0.4"
+    "use-react-router": "^1.0.4",
+    "node-vibrant"
   },
   "devDependencies": {
     "@babel/core": "^7.2.0",
