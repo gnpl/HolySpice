@@ -114,7 +114,7 @@
       </div>
     </div>
     </div>
-    <div class="navbar__brand container-fluid d-block">
+    <div class="navbar__brand container-fluid d-block" id="navbar">
       <div class="container">
         <div class="row no-gutters">
             <div class="col-2 col-md-2 navbar__logo" >
@@ -180,7 +180,7 @@
                   {% endif %}
                 </span>
               </button>
-              <div class="checkout-preview-dropdown d-none">
+              <div class="checkout-preview-dropdown d-none" id="checkbar">
                 {% include 'checkout_dropdown.html' %}
               </div>
             </div>
@@ -208,7 +208,7 @@
       </div>
     </div>
     <div class="navbar__menu container d-block ">
-        <nav class="navigation" >
+        <nav class="navigation" id="sidebar">
           <div class="men2">
           {% menu site_menu=site.settings.top_menu horizontal=True %}
           </div>
