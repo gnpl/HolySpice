@@ -5,7 +5,7 @@ $button-border-radius: 5px;
 
 // COLORS
 $body-color: #000000;
-$white: #fff;
+$white: #f2f2f2;
 $light-gray:none;
 $gray: #d3d1d0;
 $darken-gray: darken($gray, 10%);
@@ -38,5 +38,5 @@ $theme-colors: (
 );
 
 body{
-  background: url("/static/images/back.jpg");
+  background: url("/static/images/back.png");
 }
