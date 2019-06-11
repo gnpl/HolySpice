@@ -79,7 +79,8 @@
                          data-src="{% get_thumbnail image.image method="thumbnail" size=500 %}"
                          data-srcset="{% get_thumbnail image.image method="thumbnail" size=500 %} 1x, {% get_thumbnail image.image method="thumbnail" size=1000 %} 2x"
                          alt=""
-                         src="{% placeholder size=500 %}">
+                         src="{% placeholder size=500 %}"
+                         id="showcase">
                   </div>
                 </div>
               {% endfor %}
