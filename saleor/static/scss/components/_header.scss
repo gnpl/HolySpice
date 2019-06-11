@@ -227,13 +227,13 @@
     }
   }
   &__brand {
-    background-color: $light-gray;
+    background-color: #f2f2f2;
+    background: url("/static/images/back.jpg");
     @include media-breakpoint-down(sm) {
       position: fixed;
       top: 0;
       left: 0;
       width: 100vw;
-      background: url("/static/images/back.jpg");
       z-index: 5;
       border-bottom: 1px solid $gray;
     }
@@ -315,7 +315,8 @@
         height: 100vh;
         width: 70vw;
         z-index: 4;
-        background:url("/static/images/back.jpg");
+        background:url("/static/images/back.png");
+        background-color:#f2f2f2;
         padding-left: 0;
         padding-right: $global-padding;
         transition: 0.3s ease-in-out;
