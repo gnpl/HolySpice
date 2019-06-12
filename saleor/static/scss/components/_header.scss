@@ -227,8 +227,9 @@
     }
   }
   &__brand {
-    background-color: #f2f2f2;
+    
     background: url("/static/images/back.png");
+    background-color: #f2f2f2;
     @include media-breakpoint-down(sm) {
       position: fixed;
       top: 0;
