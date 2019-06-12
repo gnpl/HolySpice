@@ -15,8 +15,8 @@ export default $(document).ready((e) => {
   var source = img.getAttribute('src');
   console.log(source);
   let v = new Vibrant(source);
-  v.getPalette().then((palette) => {
-    console.log(palette.Vibrant.hex);
+  v.getPalette((err, palette) => {
+    console.log(palette.Vibrant.hex, err);
     document.body.style.backgroundColor = palette.Muted.hex;
     document.getElementById('navbar').style.backgroundColor = palette.Muted.hex;
     document.getElementById('sidebar').style.backgroundColor = palette.Muted.hex;
