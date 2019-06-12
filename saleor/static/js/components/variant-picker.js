@@ -14,6 +14,7 @@ export default $(document).ready((e) => {
   var img = document.getElementById('showcase');
   img.addEventListener('loadeddata', function() {
     let v = new Vibrant(img);
+    console.log(img);
     v.getPalette((err, palette) => {
     console.log(palette.Vibrant.hex, err);
     document.body.style.backgroundColor = palette.Muted.hex;
