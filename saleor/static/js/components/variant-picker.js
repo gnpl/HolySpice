@@ -22,7 +22,6 @@ export default $(document).ready((e) => {
     document.getElementById('checkbar').style.backgroundColor = palette.Muted.hex;
     });
   });
-  console.log(source);
   if (variantPickerContainer) {
     const variantPickerData = JSON.parse(variantPickerContainer.dataset.variantPickerData);
     ReactDOM.render(
