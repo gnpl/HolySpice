@@ -12,7 +12,17 @@ export default $(document).ready((e) => {
   const variantPickerContainer = document.getElementById('variant-picker');
   const variantPriceContainer = document.getElementById('variant-price-component');
   var img = document.getElementById('showcase');
-  var source = img.getAttribute('src');
+  img.addEventListener('load', function() {
+    var source = img.getAttribute('src');
+    let v = new Vibrant(source);
+    v.getPalette((err, palette) => {
+    console.log(palette.Vibrant.hex, err);
+    document.body.style.backgroundColor = palette.Muted.hex;
+    document.getElementById('navbar').style.backgroundColor = palette.Muted.hex;
+    document.getElementById('sidebar').style.backgroundColor = palette.Muted.hex;
+    document.getElementById('checkbar').style.backgroundColor = palette.Muted.hex;
+    });
+  });
   console.log(source);
   if (variantPickerContainer) {
     const variantPickerData = JSON.parse(variantPickerContainer.dataset.variantPickerData);
