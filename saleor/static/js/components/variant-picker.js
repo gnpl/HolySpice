@@ -12,6 +12,7 @@ export default $(document).ready((e) => {
   const variantPickerContainer = document.getElementById('variant-picker');
   const variantPriceContainer = document.getElementById('variant-price-component');
   var img = document.getElementById('showcase');
+  img.crossOrigin = "Anonymous";
   img.addEventListener('load', function() {
     let v = new Vibrant(img.getAttribute('data-src'));
     console.log(img);
