@@ -20,7 +20,7 @@
         color: $body-color;
         transition: 0.3s;
         text-transform: uppercase;
-        display: inline-block;
+        display: block;
         padding: $global-padding * 1.5;
         font-size: 1.5rem;
         &:hover {
@@ -222,7 +222,7 @@
     }
     .mobile-search-icon {
       float: right;
-      padding-right: $global-padding;
+      padding-right: 0.7rem;
       padding-bottom: $global-padding;
     }
   }
