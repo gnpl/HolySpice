@@ -13,6 +13,7 @@ export default $(document).ready((e) => {
   const variantPriceContainer = document.getElementById('variant-price-component');
   var img = document.getElementById('showcase');
   var source = img.getAttribute('src');
+  console.log(source);
   let v = new Vibrant(source);
   v.getPalette().then((palette) => {
     console.log(palette.Vibrant.hex);
