@@ -12,7 +12,7 @@ export default $(document).ready((e) => {
   const variantPickerContainer = document.getElementById('variant-picker');
   const variantPriceContainer = document.getElementById('variant-price-component');
   var img = document.getElementById('showcase');
-  img.addEventListener('loadeddata', function() {
+  img.addEventListener('load', function() {
     let v = new Vibrant(img);
     console.log(img);
     v.getPalette((err, palette) => {
