@@ -231,7 +231,6 @@
     background: url("/static/images/back.png");
     background-color: #f2f2f2;
     @include media-breakpoint-down(sm) {
-      background-color : #d9d9d9;
       position: fixed;
       top: 0;
       left: 0;
@@ -318,7 +317,7 @@
         width: 70vw;
         z-index: 4;
         background:url("/static/images/back.png");
-        background-color:#f2f2f2;
+        background-color : #d9d9d9;
         padding-left: 0;
         padding-right: $global-padding;
         transition: 0.3s ease-in-out;
