@@ -81,7 +81,7 @@
                          alt=""
                          src="{% placeholder size=500 %}"
                          id="showcase"
-                         crossorigin = "anonymous">
+                         crossorigin = "Anonymous">
                   </div>
                 </div>
               {% endfor %}
@@ -102,8 +102,7 @@
                          data-srcset="{% get_thumbnail image.image method="thumbnail" size=60 %} 1x, {% get_thumbnail image.image method="thumbnail" size=120 %} 2x"
                          alt=""
                          class="lazyload lazypreload"
-                         src="{% placeholder size=60 %}"
-                         crossorigin = "anonymous">
+                         src="{% placeholder size=60 %}">
                   </li>
                 {% endif %}
               {% endfor %}
