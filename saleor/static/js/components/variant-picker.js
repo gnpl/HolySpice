@@ -13,9 +13,9 @@ export default $(document).ready((e) => {
   const variantPriceContainer = document.getElementById('variant-price-component');
   var img = document.getElementById('showcase');
   img.crossOrigin = "Anonymous";
-  img.addEventListener('loadeddata', function() {
-    let v = new Vibrant(img);
-    console.log(img);
+  img.addEventListener('load', function() {
+    let v = new Vibrant(this);
+    console.log(this);
     v.getPalette((err, palette) => {
     console.log(palette.Vibrant.hex, err);
     document.body.style.backgroundColor = palette.Muted.hex;
