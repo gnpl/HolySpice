@@ -13,14 +13,14 @@ export default $(document).ready((e) => {
   const variantPriceContainer = document.getElementById('variant-price-component');
   var img = document.getElementById('showcase');
   img.crossOrigin = "Anonymous";
-  img.addEventListener('load', function() {
+  img.addEventListener('loadeddata', function() {
     let v = new Vibrant(img);
     console.log(img);
     v.getPalette((err, palette) => {
     console.log(palette.Vibrant.hex, err);
     document.body.style.backgroundColor = palette.Muted.hex;
     document.getElementById('navbar').style.backgroundColor = palette.Muted.hex;
-    document.getElementById('sidebar').style.backgroundColor = palette.Muted.hex;
+    document.getElementById('sidebar').style.backgroundColor = palette.DarkMuted.hex;
     document.getElementById('checkbar').style.backgroundColor = palette.Muted.hex;
     });
   });
