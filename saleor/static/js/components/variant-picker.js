@@ -14,16 +14,11 @@ export default $(document).ready((e) => {
   var img = document.getElementById('showcase');
   img.crossOrigin = 'Anonymous';
   img.addEventListener('load', function() {
-    let v = new Vibrant(img);
-    console.log(v,img);
-    v.getPalette((err, palette) => {
-    console.log(palette.Muted.hex, err);
-    document.body.style.backgroundColor = palette.Muted.hex;
-    document.getElementById('navbar').style.backgroundColor = palette.Muted.hex;
-    document.getElementById('sidebar').style.backgroundColor = palette.DarkMuted.hex;
-    document.getElementById('checkbar').style.backgroundColor = palette.Muted.hex;
-    });
-  }, true);
+    document.body.style.backgroundColor = '#eab441';
+    document.getElementById('navbar').style.backgroundColor = '#eab441';
+    document.getElementById('sidebar').style.backgroundColor = '#e8ae30';
+    document.getElementById('checkbar').style.backgroundColor = '#eab441';
+  });
   if (variantPickerContainer) {
     const variantPickerData = JSON.parse(variantPickerContainer.dataset.variantPickerData);
     ReactDOM.render(
