@@ -14,7 +14,7 @@ export default $(document).ready((e) => {
   var img = document.getElementById('showcase');
   img.crossOrigin = "Anonymous";
   img.addEventListener('load', function() {
-    let v = new Vibrant(img.getAttribute('data-src'));
+    let v = new Vibrant(img);
     console.log(img);
     v.getPalette((err, palette) => {
     console.log(palette.Vibrant.hex, err);
