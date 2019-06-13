@@ -12,6 +12,7 @@ export default $(document).ready((e) => {
   const variantPickerContainer = document.getElementById('variant-picker');
   const variantPriceContainer = document.getElementById('variant-price-component');
   var img = document.getElementById('showcase');
+  img.crossOrigin = 'Anonymous';
   img.addEventListener('load', function() {
     let v = new Vibrant(img);
     console.log(v,img);
@@ -22,7 +23,7 @@ export default $(document).ready((e) => {
     document.getElementById('sidebar').style.backgroundColor = palette.DarkMuted.hex;
     document.getElementById('checkbar').style.backgroundColor = palette.Muted.hex;
     });
-  });
+  }, true);
   if (variantPickerContainer) {
     const variantPickerData = JSON.parse(variantPickerContainer.dataset.variantPickerData);
     ReactDOM.render(
