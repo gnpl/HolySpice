@@ -180,7 +180,8 @@
   ul {
     width: 20rem;
     list-style: none;
-    background: $light-gray;
+    background : url("/static/images/back.png");
+    background-color: #f2f2f2;
     box-shadow: 3px 3px 3px 0px rgba($gray, 0.75);
     position: absolute;
     top: 2.5rem;
