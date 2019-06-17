@@ -21,7 +21,7 @@ export default $(document).ready((e) => {
   return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
   }
   var img = document.getElementById('showcase');
-  img.crossOrigin = 'Anonymous';
+  img.setAttribute('crossOrigin', 'anonymous');
   img.addEventListener('load', function() {
     var base64 = getBase64Image(img);
     let v = Vibrant.from(base64).useQuantizer(Vibrant.Quantizer.WebWorker);
