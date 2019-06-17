@@ -11,10 +11,20 @@ import {onAddToCheckoutSuccess, onAddToCheckoutError} from './checkout';
 export default $(document).ready((e) => {
   const variantPickerContainer = document.getElementById('variant-picker');
   const variantPriceContainer = document.getElementById('variant-price-component');
+  function getBase64Image(img) {
+  var canvas = document.createElement("canvas");
+  canvas.width = img.width;
+  canvas.height = img.height;
+  var ctx = canvas.getContext("2d");
+  ctx.drawImage(img, 0, 0);
+  var dataURL = canvas.toDataURL("image/png");
+  return dataURL.replace(/^data:image\/(png|jpg);base64,/, "");
+  }
   var img = document.getElementById('showcase');
   img.crossOrigin = 'Anonymous';
   img.addEventListener('load', function() {
-    let v = Vibrant.from(img).useQuantizer(Vibrant.Quantizer.WebWorker);
+    var base64 = getBase64Image(img);
+    let v = Vibrant.from(base64).useQuantizer(Vibrant.Quantizer.WebWorker);
     v.getPalette().then((palette) => console.log(palette));
     document.body.style.backgroundColor = '#eab441';
     document.getElementById('navbar').style.backgroundColor = '#eab441';
