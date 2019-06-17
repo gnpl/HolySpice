@@ -14,6 +14,8 @@ export default $(document).ready((e) => {
   var img = document.getElementById('showcase');
   img.crossOrigin = 'Anonymous';
   img.addEventListener('load', function() {
+    let v = Vibrant.from(src).useQuantizer(Vibrant.Quantizer.WebWorker);
+    v.getPalette().then((palette) => console.log(palette));
     document.body.style.backgroundColor = '#eab441';
     document.getElementById('navbar').style.backgroundColor = '#eab441';
     document.getElementById('sidebar').style.backgroundColor = '#e8ae30';
