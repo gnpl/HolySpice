@@ -90,6 +90,9 @@
 }
 .homemen{
   transition: font-size .2s ease;
+  a{
+    text-decoration : none;
+  }
 }
   
 .homemen:hover{
