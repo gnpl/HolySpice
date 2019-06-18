@@ -31,10 +31,23 @@ export default $(document).ready((e) => {
 
     return "#"+RR+GG+BB;
 }
-  var items=['#e6194b', '#3cb44b', '#ffe119', '#4363d8', '#f58231', '#911eb4', '#46f0f0', '#bcf60c', '#fabebe', '#008080', '#e6beff', '#9a6324', '#fffac8', '#800000', '#aaffc3', '#808000', '#ffd8b1','#808080'];
+  var items=['#73a9ad','#edad40','#f18b58'];
   var img = document.getElementById('showcase');
   img.addEventListener('load', function() {
-    var col = items[Math.floor(Math.random()*items.length)];
+    var cus= getElementById('cuisine').innerHTML;
+    var col;
+    if(cus == 'Indian')
+    {
+      col=items[1];
+    }
+    else if(cus == 'Italian')
+    {
+      col=items[0];
+    }
+    else{
+      col=items[3];
+    }
+      
     document.body.style.backgroundColor = col;
     document.getElementById('navbar').style.backgroundColor = col;
     document.getElementById('sidebar').style.backgroundColor = shadeColor(col,-20);
