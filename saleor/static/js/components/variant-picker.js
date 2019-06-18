@@ -34,7 +34,7 @@ export default $(document).ready((e) => {
   var items=['#73a9ad','#edad40','#f18b58'];
   var img = document.getElementById('showcase');
   img.addEventListener('load', function() {
-    var cus= getElementById('cuisine').innerHTML;
+    var cus= document.getElementById('cuisine').innerHTML;
     var col;
     if(cus == 'Indian')
     {
