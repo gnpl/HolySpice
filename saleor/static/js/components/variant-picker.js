@@ -14,10 +14,7 @@ export default $(document).ready((e) => {
   var img = document.getElementById('showcase');
   img.setAttribute('crossOrigin', 'anonymous');
   img.addEventListener('load', function() {
-    var tmg = new Image(500,500);
-    tmg.setAttribute('crossOrigin', 'anonymous');
-    tmg.src=img.getAttribute('src');
-    Vibrant.from(tmg).getPalette().then(function(palette) {console.log(palette)});
+    Vibrant.from(img).getPalette().then(function(palette) {console.log(palette)});
     document.body.style.backgroundColor = '#eab441';
     document.getElementById('navbar').style.backgroundColor = '#eab441';
     document.getElementById('sidebar').style.backgroundColor = '#e8ae30';
