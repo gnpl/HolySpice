@@ -45,7 +45,7 @@ export default $(document).ready((e) => {
     document.body.style.backgroundColor = col;
     document.getElementById('navbar').style.backgroundColor = col;
     document.getElementById('sidebar').style.backgroundColor = shadeColor(col,-20);
-    document.getElementById('checkbar').style.backgroundColor = col;
+    document.getElementById('checkbar').style.backgroundColor = shadeColor(col,-20);
   });
   if (variantPickerContainer) {
     const variantPickerData = JSON.parse(variantPickerContainer.dataset.variantPickerData);
