@@ -88,8 +88,12 @@
     font-size: 0.7rem;
   }
 }
+.homemen{
+  transition: font-size .2s ease;
+}
+  
 .homemen:hover{
 
-  zoom: 1.5;
+  font-size : 2rem;
 
 }
