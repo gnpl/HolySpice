@@ -39,6 +39,7 @@ export default $(document).ready((e) => {
       .slice(2, 8)
   );
 }
+  var img = document.getElementById('showcase');
   img.addEventListener('load', function() {
     var col = getColor();
     document.body.style.backgroundColor = col;
