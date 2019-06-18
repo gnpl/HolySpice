@@ -84,4 +84,22 @@
   .hmenu{
     padding-left: 3vw;
   }
+  .cred{
+    font-size: 0.7rem;
+  }
+}
+.homemen{
+  transition: font-size .2s ease;
+  a{
+    text-decoration : none;
+  }
+}
+  
+.homemen:hover{
+
+  font-size : 2rem;
+  a{
+    text-decoration : none;
+  }
+
 }

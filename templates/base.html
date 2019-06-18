@@ -114,7 +114,7 @@
       </div>
     </div>
     </div>
-    <div class="navbar__brand container-fluid d-block">
+    <div class="navbar__brand container-fluid d-block" id="navbar">
       <div class="container">
         <div class="row no-gutters">
             <div class="col-2 col-md-2 navbar__logo" >
@@ -123,7 +123,7 @@
                   <svg data-src="{% static "images/mobile-menu.svg" %}" width="28px" height="20px"/>
                 </div>
                 <a href="{% url 'home' %}" style="z-index:5;">
-                  <img src="/static/images/logo-light.png" height="120px" width="130px">
+                  <img src="/static/images/logo-light.png" height="100px" width="100px">
                 </a>
               </div>
           <div class="col-8 col-md-8 hmenu" style="text-align:center;padding-left:2.5vw;">
@@ -170,7 +170,7 @@
             <div class="navbar__brand__checkout ">
               <button rel="nofollow" class="checkout__icon btn" >  
                 <div class="navbar__brand__checkout__icon">
-                  <svg data-src="{% static "images/checkout.svg" %}" width="24" height="24"/>
+                  <img src="/static/images/checkout.png" width="24" height="24"/>
                 </div>
                 <span class="badge {% if not checkout_counter %}empty{% endif %}">
                   {% if checkout_counter %}
@@ -180,14 +180,14 @@
                   {% endif %}
                 </span>
               </button>
-              <div class="checkout-preview-dropdown d-none">
+              <div class="checkout-preview-dropdown d-none" id="checkbar">
                 {% include 'checkout_dropdown.html' %}
               </div>
             </div>
             <div class="navbar__search static men2">
                 {% if SEARCH_IS_ENABLED %}
                   <div class="d-md-none mobile-search-icon">
-                    <svg data-src="{% static "images/search.svg" %}" width="30" height="30"/>
+                    <img src="/static/images/search.png" width="28" height="28"/>
                   </div>
                   <form class="form-inline search-form search-form--hidden" action="{% url "search:search" %}">
                     <div class="mobile-close-search d-md-none">
@@ -208,7 +208,7 @@
       </div>
     </div>
     <div class="navbar__menu container d-block ">
-        <nav class="navigation" >
+        <nav class="navigation" id="sidebar">
           <div class="men2">
           {% menu site_menu=site.settings.top_menu horizontal=True %}
           </div>
@@ -322,10 +322,19 @@
       <div class="row">
         <div class="col-4">
           <a href="{% url 'home' %}" class="footer__logo float-md-left">
-            <img src="/static/images/logo-light.png" height="120px" width="130px">
+            <img src="/static/images/logo-light.png" height="100px" width="100px">
           </a>
         </div>
-        <div class="col-8 footer__copy-text">© 2019 HOLYSPICE</div>
+        <div class="col-8 footer__copy-text">
+          © 2019 HOLYSPICE
+          <p style="color:grey;" class="cred">
+            Developed By Dikshant Sagar.
+          
+          <a target="_blank" rel="noopener" class="social-footer" href="https://www.github.com/dikshantsagar">
+            <svg data-src="{% static "images/github-logo.svg" %}" width="40px" height="40px"/>
+          </a>
+            </p>
+        </div>
       </div>
     </div>
   </div>

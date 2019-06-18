@@ -27,16 +27,23 @@ export const onAddToCheckoutSuccess = () => {
 };
 
 export default $(document).ready((e) => {
+   if (window.innerWidth < 770) {
+    $checkoutIcon.click((e) => {
+      window.location = '/checkout/';
+    });
+  } else {
+    $checkoutIcon.click((e) => {
+      $checkoutDropdown.addClass('show');
+      $('.chclose').click((e) => {
+        $checkoutDropdown.removeClass('show');
+      });
+    });
+  }
   // Checkout dropdown
   $.get(summaryLink, (data) => {
     $checkoutDropdown.html(data);
   });
-  $checkoutIcon.click((e) => {
-    $checkoutDropdown.addClass('show');
-    $('.chclose').click((e) => {
-      $checkoutDropdown.removeClass('show');
-    });
-  });
+  
   $('.product-form button').click((e) => {
     e.preventDefault();
     let quantity = $('#id_quantity').val();

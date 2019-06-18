@@ -19,12 +19,16 @@ export default class AttributeSelectionWidget extends Component {
     const ur1 = "<img src='/static/images/";
     const ur2 = ".png' height='50px' width='50px'>";
     const { attribute, selected } = this.props;
+    const variantPickerContainer = document.getElementById('variant-picker');
+    const variantPickerData = JSON.parse(variantPickerContainer.dataset.variantPickerData);
+    var rates = {};
     return (
       <div className="variant-picker">
         <div className="variant-picker__label">{attribute.name}</div>
         <div className="btn-group" data-toggle="buttons">
           {attribute.values.map((value, i) => {
             const active = selected === value.pk.toString();
+            rates[value.pk] = +(Math.round(Number(variantPickerData.variants[i].price.net) / Number(attribute.values[i].name.match(/\d/g).join('')) + 'e+2') + 'e-2');
             const labelClass = classNames({
               'btn btn-secondary variant-picker__option': true,
               'active': active
@@ -33,7 +37,9 @@ export default class AttributeSelectionWidget extends Component {
               <label
                 className={labelClass}
                 key={i}
-                onClick={() => this.handleChange(attribute.pk, value.pk)}>
+                onClick={() => {
+                  this.handleChange(attribute.pk, value.pk);
+                }}>
                 <input
                   defaultChecked={active}
                   name={value.pk}
@@ -43,6 +49,7 @@ export default class AttributeSelectionWidget extends Component {
             );
           })}
         </div>
+        <p>₹{rates[selected]}/gm</p>
       </div>
     );
   }

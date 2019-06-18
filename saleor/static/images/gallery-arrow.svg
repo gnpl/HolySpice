@@ -4,10 +4,10 @@
 <g id="Canvas" transform="translate(-1659 898)" figma:type="canvas">
 <g id="Group" style="mix-blend-mode:normal;" figma:type="frame">
 <g id="Line 5" style="mix-blend-mode:normal;" figma:type="line">
-<use xlink:href="#path0_stroke" transform="matrix(0.704759 -0.709446 0.704759 0.709446 1660.03 -860.25)" fill="#BFBFBF" style="mix-blend-mode:normal;"/>
+<use xlink:href="#path0_stroke" transform="matrix(0.704759 -0.709446 0.704759 0.709446 1660.03 -860.25)" fill="#000000" style="mix-blend-mode:normal;"/>
 </g>
 <g id="Line 6" style="mix-blend-mode:normal;" figma:type="line">
-<use xlink:href="#path1_stroke" transform="matrix(-0.704759 -0.709446 0.704759 -0.709446 1678.41 -878.75)" fill="#BFBFBF" style="mix-blend-mode:normal;"/>
+<use xlink:href="#path1_stroke" transform="matrix(-0.704759 -0.709446 0.704759 -0.709446 1678.41 -878.75)" fill="#000000" style="mix-blend-mode:normal;"/>
 </g>
 </g>
 </g>

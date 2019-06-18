@@ -7,7 +7,8 @@
   display: none;
   border: solid 1px $gray;
   border-radius: 4px 0 4px 4px;
-  background-color: $white;
+  background: url("/static/images/back.png");
+  background-color : #f2f2f2;
   .container {
     padding-top: $global-padding * 2;
     padding-bottom: $global-padding * 2;
@@ -25,7 +26,7 @@
     &.overflow {
       overflow-y: hidden;
     }
-    background: $white;
+    background: none;
     .item {
       height: 5rem;
       border-bottom: solid 1px $gray;
