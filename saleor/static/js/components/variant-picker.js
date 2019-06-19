@@ -31,11 +31,11 @@ export default $(document).ready((e) => {
 
     return "#"+RR+GG+BB;
 }
-  var items=['#73a9ad','#edad40','#f18b58'];
+  var items=['#73a9ad','#edad40'];
   var img = document.getElementById('showcase');
   img.addEventListener('load', function() {
     var cus= document.getElementById('cuisine').innerHTML;
-    var col;
+    var col='#f18b58';
     if(cus == 'Indian')
     {
       col=items[1];
@@ -43,9 +43,6 @@ export default $(document).ready((e) => {
     else if(cus == 'Italian')
     {
       col=items[0];
-    }
-    else{
-      col=items[3];
     }
       
     document.body.style.backgroundColor = col;
