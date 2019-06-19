@@ -49,7 +49,10 @@ export default class AttributeSelectionWidget extends Component {
             );
           })}
         </div>
+        <div
+          className='btn btn-primary disabled'>
         <p>₹{rates[selected]}/gm</p>
+        </div>
       </div>
     );
   }
