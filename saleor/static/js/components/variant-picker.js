@@ -31,20 +31,16 @@ export default $(document).ready((e) => {
 
     return "#"+RR+GG+BB;
 }
-  var items=['#73a9ad','#edad40'];
+  var items = ['#73a9ad','#edad40'];
   var img = document.getElementById('showcase');
   img.addEventListener('load', function() {
-    var cus= document.getElementById('cuisine').innerHTML;
-    var col='#f18b58';
-    if(cus == 'Indian')
-    {
-      col=items[1];
+    var cus = document.getElementById('cuisine').innerHTML;
+    var col = '#f18b58';
+    if (cus === 'Indian') {
+      col = items[1];
+    } else if (cus === 'Italian') {
+      col = items[0];
     }
-    else if(cus == 'Italian')
-    {
-      col=items[0];
-    }
-      
     document.body.style.backgroundColor = col;
     document.getElementById('navbar').style.backgroundColor = col;
     document.getElementById('sidebar').style.backgroundColor = shadeColor(col,-20);
