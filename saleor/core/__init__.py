@@ -30,7 +30,7 @@ class TaxRateType:
     STANDARD = 'standard'
 
     CHOICES = (
-        (SPICES, pgettext_lazy('VAT rate type', 'standard')),
+        (SPICES, pgettext_lazy('VAT rate type', 'spices')),
         (HERBS, pgettext_lazy('VAT rate type', 'herbs')),
         (SEASONINGS, pgettext_lazy('VAT rate type', 'seasonings')),
         (STANDARD, pgettext_lazy('VAT rate type', 'standard')))
