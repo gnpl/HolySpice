@@ -331,9 +331,9 @@ DEFAULT_DECIMAL_PLACES = get_currency_fraction(DEFAULT_CURRENCY)
 DEFAULT_MAX_DIGITS = 12
 AVAILABLE_CURRENCIES = [DEFAULT_CURRENCY]
 COUNTRIES_OVERRIDE = {
-    'EU': pgettext_lazy(
-        'Name of political and economical union of european countries',
-        'European Union')}
+    'IN': pgettext_lazy(
+        'Name of Country',
+        'India')}
 
 OPENEXCHANGERATES_API_KEY = os.environ.get('OPENEXCHANGERATES_API_KEY')
 
