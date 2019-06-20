@@ -325,7 +325,7 @@ AUTH_USER_MODEL = 'account.User'
 
 LOGIN_URL = '/account/login/'
 
-DEFAULT_COUNTRY = os.environ.get('DEFAULT_COUNTRY', 'IND')
+DEFAULT_COUNTRY = os.environ.get('DEFAULT_COUNTRY', 'IN')
 DEFAULT_CURRENCY = os.environ.get('DEFAULT_CURRENCY', 'INR')
 DEFAULT_DECIMAL_PLACES = get_currency_fraction(DEFAULT_CURRENCY)
 DEFAULT_MAX_DIGITS = 12
