@@ -332,7 +332,7 @@ DEFAULT_MAX_DIGITS = 12
 AVAILABLE_CURRENCIES = [DEFAULT_CURRENCY]
 COUNTRIES_OVERRIDE = {
     'IN': pgettext_lazy(
-        'Name of Country',
+        'Name of political and economical union of european countries',
         'India')}
 
 OPENEXCHANGERATES_API_KEY = os.environ.get('OPENEXCHANGERATES_API_KEY')
