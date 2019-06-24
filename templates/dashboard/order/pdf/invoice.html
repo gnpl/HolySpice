@@ -13,7 +13,7 @@
 
 {% block content %}
   <h2>{% trans "Invoice" context "Order invoice" %}</h2>
-  <table width="100%" border="1" cellspacing="0">
+  <table class="table">
     <thead>
     <tr>
       {% if order.shipping_address %}
@@ -46,7 +46,7 @@
 
   <h2>{% trans "Items Ordered" context "Invoice ordered items header" %}</h2>
   {% if order %}
-    <table class="data-table order-table bordered">
+    <table class="data-table order-table bordered table">
       <thead>
       <tr>
         <th>
@@ -100,7 +100,7 @@
     </table>
   {% endif %}
 
-  <table class="bordered highlight responsive data-table">
+  <table class="bordered highlight responsive data-table table ">
     <tbody>
       <tr>
         <td class="wide">
