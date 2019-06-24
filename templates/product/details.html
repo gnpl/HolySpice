@@ -149,11 +149,11 @@
                 {% tax_rate request.taxes product.tax_rate as tax_rate %}
                 {% if site.settings.display_gross_prices %}
                   {% blocktrans trimmed with tax_rate=tax_rate context "Product details page vat rate value" %}
-                    including {{ tax_rate }}% VAT
+                    including {{ tax_rate }}% GST
                   {% endblocktrans %}
                 {% else %}
                   {% blocktrans trimmed with tax_rate=tax_rate context "Product details page vat rate value" %}
-                    excluding {{ tax_rate }}% VAT
+                    excluding {{ tax_rate }}% GST
                   {% endblocktrans %}
                 {% endif %}
               </small>
