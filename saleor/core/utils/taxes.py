@@ -60,10 +60,8 @@ def get_taxes_for_country(country):
 
 def get_taxes_for_address(address):
     """Return proper taxes for address or default country."""
-    if address is not None:
-        country = address.country
-    else:
-        country = Country(settings.DEFAULT_COUNTRY)
+    
+    country = Country(settings.DEFAULT_COUNTRY)
 
     return get_taxes_for_country(country)
 

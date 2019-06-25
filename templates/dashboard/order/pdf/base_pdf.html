@@ -2,6 +2,7 @@
 {% load price from taxed_prices %}
 {% load discount_as_negative from voucher %}
 {% load render_bundle from webpack_loader %}
+{% load static %}
 
 <html lang="{{ LANGUAGE_CODE }}">
   <head>
@@ -26,7 +27,7 @@
   <body>
     <header>
       <div style="float: left">
-        <img alt="logo" src="{% static "images/logo-light.svg" %}" />
+        <img src="/static/images/logo-light.png" height="100px" width="100px">
       </div>
 
       <div style="float: right">

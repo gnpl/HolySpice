@@ -325,15 +325,15 @@ AUTH_USER_MODEL = 'account.User'
 
 LOGIN_URL = '/account/login/'
 
-DEFAULT_COUNTRY = os.environ.get('DEFAULT_COUNTRY', 'IND')
+DEFAULT_COUNTRY = os.environ.get('DEFAULT_COUNTRY', 'IN')
 DEFAULT_CURRENCY = os.environ.get('DEFAULT_CURRENCY', 'INR')
 DEFAULT_DECIMAL_PLACES = get_currency_fraction(DEFAULT_CURRENCY)
 DEFAULT_MAX_DIGITS = 12
 AVAILABLE_CURRENCIES = [DEFAULT_CURRENCY]
 COUNTRIES_OVERRIDE = {
-    'EU': pgettext_lazy(
+    'IN': pgettext_lazy(
         'Name of political and economical union of european countries',
-        'European Union')}
+        'India')}
 
 OPENEXCHANGERATES_API_KEY = os.environ.get('OPENEXCHANGERATES_API_KEY')
 
@@ -386,7 +386,7 @@ bootstrap4 = {
 TEST_RUNNER = 'tests.runner.PytestTestRunner'
 
 ALLOWED_HOSTS = get_list(
-    os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,holyspice.herokuapp.com'))
+    os.environ.get('ALLOWED_HOSTS', 'localhost,127.0.0.1,holyspice.herokuapp.com,holyspice-trial-beta.herokuapp.com'))
 ALLOWED_GRAPHQL_ORIGINS = os.environ.get('ALLOWED_GRAPHQL_ORIGINS', '*')
 
 SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
