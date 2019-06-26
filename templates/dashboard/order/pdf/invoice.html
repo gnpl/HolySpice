@@ -85,14 +85,10 @@
               {{ line.product_sku }}
             </td>
             <td class="right-align">
-              {% blocktrans with tax_rate=line.tax_rate context "Order line tax rate value" %}
-                {{ tax_rate|div:2 }} %
-              {% endblocktrans %}
+              {% widthratio line.tax_rate 2 1 %} %
             </td>
             <td class="right-align">
-              {% blocktrans with tax_rate=line.tax_rate context "Order line tax rate value" %}
-                {% widthratio tax_rate 2 1 %} %
-              {% endblocktrans %}
+               {% widthratio line.tax_rate 2 1 %} %
             </td>
             <td class="right-align">
               {% price line.unit_price.gross %}
