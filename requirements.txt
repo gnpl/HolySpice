@@ -34,6 +34,7 @@ django-impersonate==1.4
 django-js-asset==1.2.2
 django-measurement==3.0.0
 django-mptt==0.10.0
+django-mathfilters==0.4.0
 django-phonenumber-field==2.3.1
 django-prices-openexchangerates==1.0.1
 django-prices==1.0.4
