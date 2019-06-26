@@ -85,10 +85,10 @@
               {{ line.product_sku }}
             </td>
             <td class="right-align">
-              {% widthratio line.tax_rate 2 1 %} %
+              {% line.tax_rate|div:2 %} %
             </td>
             <td class="right-align">
-               {% widthratio line.tax_rate 2 1 %} %
+               {% line.tax_rate|div:2 %} %
             </td>
             <td class="right-align">
               {% price line.unit_price.gross %}
