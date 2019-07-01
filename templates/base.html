@@ -197,8 +197,8 @@
                            value="{% if query %}{{ query }}{% endif %}"
                            placeholder="{% trans "Search for product" %}"
                            required>
-                    <button class="btn btn-primary" type="submit">
-                      {% trans "" %} <svg data-src="{% static "images/search.svg" %}" width="18" height="18"/>
+                    <button class="btn btn-primary sbutton" type="submit" style="border:none;">
+                       <img src="/static/images/search.png" width="25" height="25"/>
                     </button>
                   </form>
                 {% endif %}

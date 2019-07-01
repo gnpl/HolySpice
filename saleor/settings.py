@@ -241,6 +241,7 @@ INSTALLED_APPS = [
     'django_prices_vatlayer',
     'graphene_django',
     'mptt',
+    'mathfilters',
     'webpack_loader',
     'social_django',
     'django_countries',
