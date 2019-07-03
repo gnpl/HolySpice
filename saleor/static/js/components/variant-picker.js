@@ -38,10 +38,8 @@ export default $(document).ready((e) => {
     'Indian': '#edad40',
     'Mexican': '#f18b58'
   };
-  img.addEventListener('load', function() {
     var cus = document.getElementById('cuisine').innerHTML;
     var col = cols[cus];
-  }, true);
     document.body.style.backgroundColor = col;
     document.getElementById('navbar').style.backgroundColor = col;
     document.getElementById('sidebar').style.backgroundColor = shadeColor(col,-20);
